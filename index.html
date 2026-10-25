@@ -1,151 +1,1044 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ironhouse Gym – Strength, simply</title>
-<meta name="description" content="Ironhouse Gym: barbells, racks, coached classes and honest monthly prices.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Big+Shoulders+Display:wght@800;900&display=swap" rel="stylesheet">
-<style>
-:root{--floor:#d8d6d0;--ink:#1c2026;--paper:#efeee9;--red:#c8312b;--blue:#1d4e89;--yellow:#f2b705;--green:#2f7d4f;--white:#f7f7f5}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font:400 17px/1.55 Archivo,system-ui,sans-serif;background:var(--floor);color:var(--ink)}
-h1,h2,h3,.big{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;line-height:.92;letter-spacing:.01em}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font:900 28px "Big Shoulders Display",Impact,sans-serif;text-decoration:none}
-nav a{margin-left:22px;text-decoration:none;font-weight:600}
-nav a:hover{text-decoration:underline}
-.hero{padding:30px 0 70px}
-h1{font-size:clamp(56px,11vw,128px);max-width:9ch}
-.lede{max-width:46ch;margin:22px 0 30px;font-size:19px}
-.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 26px;border:0;font:600 16px Archivo,sans-serif;text-decoration:none;cursor:pointer}
-.btn:hover{background:var(--red)}
-.rig{background:var(--paper);padding:22px;margin-top:40px}
-.rig p{font-weight:600}
-.total{font-size:clamp(48px,9vw,88px)}
-.total small{font:600 18px Archivo,sans-serif}
-svg{width:100%;height:auto;display:block;margin:8px 0 14px}
-.plates{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.plates button{width:64px;height:64px;border-radius:50%;border:6px solid rgba(0,0,0,.25);font:700 16px Archivo,sans-serif;cursor:pointer;color:#fff}
-.plates .ghost{width:auto;height:auto;border-radius:0;border:2px solid var(--ink);background:none;color:var(--ink);padding:10px 16px}
-section{padding:70px 0}
-h2{font-size:clamp(40px,6vw,72px);margin-bottom:26px}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-.tabs button{padding:9px 16px;border:2px solid var(--ink);background:none;font:600 15px Archivo,sans-serif;cursor:pointer}
-.tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
-.sched{list-style:none;padding:0;background:var(--paper)}
-.sched li{display:grid;grid-template-columns:90px 1fr auto;gap:12px;padding:16px 20px;border-bottom:2px solid var(--floor);align-items:center}
-.sched b{font:800 26px "Big Shoulders Display",sans-serif}
-.lvl{font-size:14px;padding:3px 10px;color:#fff}
-.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.tier{background:var(--paper);padding:26px;border-top:14px solid var(--c)}
-.tier h3{font-size:44px}
-.tier .big{font-size:52px;margin:10px 0}
-.tier ul{padding-left:18px;margin:12px 0 22px}
-.join{background:var(--ink);color:var(--paper)}
-.join form{display:flex;flex-wrap:wrap;gap:10px;max-width:560px}
-.join input{flex:1 1 240px;padding:14px;font:17px Archivo,sans-serif;border:0}
-.join .btn{background:var(--yellow);color:var(--ink)}
-#msg{margin-top:14px;min-height:1.5em}
-footer{padding:30px 0;font-size:15px}
-@media(max-width:560px){.sched li{grid-template-columns:70px 1fr}.lvl{grid-column:2;justify-self:start}nav a{margin-left:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ironhouse Athletic Club</title>
+  <meta name="description" content="A private athletic club for strength, mobility and recovery in a refined, modern environment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --base: #14201B;
+      --surface: #E6E1D8;
+      --light: #F7F5F1;
+      --accent: #B08D57;
+      --accent-soft: rgba(176, 141, 87, 0.14);
+      --muted: #6a675f;
+      --line: rgba(20, 32, 27, 0.14);
+      --shadow: 0 30px 70px rgba(20, 32, 27, 0.12);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      background: var(--light);
+      color: var(--base);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+    }
+
+    img, video, iframe { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    h1, h2, h3, .serif {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 0.9;
+      margin: 0;
+    }
+
+    p { margin: 0; }
+
+    .container {
+      width: min(1220px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--base);
+      opacity: 0.5;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(20,32,27,.15);
+      background: var(--base);
+      color: var(--light);
+      font-weight: 700;
+      transition: transform .3s ease, background .3s ease, border-color .3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: #1a2a24;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--base);
+      border-color: rgba(20,32,27,.2);
+    }
+
+    .button.secondary:hover {
+      background: rgba(20,32,27,.03);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247,245,241,0.74);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(20,32,27,0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 20px;
+      position: relative;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: var(--accent);
+      font-size: 0.75em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--base);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--base);
+      color: var(--light);
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      filter: saturate(0.68) brightness(0.78) contrast(1.1);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(20,32,27,0.75), rgba(20,32,27,0.28) 45%, rgba(20,32,27,0.6));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 110px 0 90px;
+      width: min(1220px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(4.5rem, 8vw, 9rem);
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 0.82;
+      margin: 18px 0 20px;
+      max-width: 640px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 1.09rem;
+      color: rgba(247,245,241,0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .hero .button.secondary {
+      background: rgba(247,245,241,0.04);
+      border-color: rgba(247,245,241,0.2);
+      color: var(--light);
+    }
+
+    .hero .button.secondary:hover {
+      background: rgba(247,245,241,0.08);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      margin-top: 36px;
+      color: rgba(247,245,241,0.8);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 120px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(3.2rem, 5vw, 5rem);
+      font-weight: 500;
+      line-height: 0.9;
+      max-width: 560px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 430px;
+      font-size: 1.02rem;
+    }
+
+    .philosophy {
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .philosophy-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: end;
+    }
+
+    .philosophy-copy {
+      font-size: clamp(1.35rem, 2vw, 2.3rem);
+      line-height: 1.12;
+      font-family: "Cormorant Garamond", serif;
+      color: var(--base);
+      font-weight: 500;
+      max-width: 680px;
+    }
+
+    .philosophy-note {
+      padding-top: 20px;
+      border-top: 1px solid rgba(20,32,27,0.18);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .spaces-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .space-card {
+      background: var(--light);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .space-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .space-card .details {
+      padding: 18px 18px 20px;
+    }
+
+    .space-card h3 {
+      font-size: 2.1rem;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .space-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .programmes {
+      background: rgba(230,225,216,0.55);
+    }
+
+    .programme-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .programme-item {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: stretch;
+      background: rgba(255,255,255,0.34);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(20, 32, 27, 0.05);
+    }
+
+    .programme-item.reverse {
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .programme-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+    }
+
+    .programme-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 44px 42px;
+      background: rgba(247,245,241,0.85);
+    }
+
+    .programme-content .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .programme-content h3 {
+      font-size: clamp(2.7rem, 4vw, 4.1rem);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .programme-content p {
+      color: var(--muted);
+      margin-bottom: 22px;
+      max-width: 38ch;
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      color: var(--base);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .feature-list li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 8px;
+    }
+
+    .coaches {
+      background: var(--light);
+    }
+
+    .coaches-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .coach-card {
+      background: rgba(230,225,216,0.4);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .coach-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .coach-content {
+      padding: 18px 18px 22px;
+    }
+
+    .coach-content h3 {
+      font-size: 2.2rem;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .coach-content p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .membership {
+      background: var(--base);
+      color: var(--light);
+    }
+
+    .membership .section-head p,
+    .membership .membership-card p,
+    .membership .membership-card li {
+      color: rgba(247,245,241,0.78);
+    }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .membership-card {
+      background: rgba(247,245,241,0.02);
+      border: 1px solid rgba(247,245,241,0.12);
+      border-radius: 24px;
+      padding: 26px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .membership-card.featured {
+      background: linear-gradient(180deg, rgba(176,141,87,0.1), rgba(247,245,241,0.03));
+      border-color: rgba(176,141,87,0.45);
+    }
+
+    .membership-card .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(247,245,241,0.16);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(247,245,241,0.9);
+      margin-bottom: 18px;
+    }
+
+    .membership-card h3 {
+      font-size: clamp(2.1rem, 2.2vw, 3rem);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: clamp(2.4rem, 3vw, 3.4rem);
+      font-weight: 600;
+      margin: 12px 0 16px;
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1;
+    }
+
+    .price small {
+      font-size: 0.58em;
+      font-family: "Manrope", sans-serif;
+      letter-spacing: 0.02em;
+      color: rgba(247,245,241,0.78);
+      font-weight: 600;
+    }
+
+    .membership-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 26px;
+      display: grid;
+      gap: 10px;
+      color: rgba(247,245,241,0.82);
+    }
+
+    .membership-card li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 8px;
+    }
+
+    .membership-card .button {
+      margin-top: auto;
+    }
+
+    .visit {
+      background: var(--surface);
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .visit-panel,
+    .map-panel {
+      background: rgba(255,255,255,0.34);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .visit-panel {
+      padding: 34px 30px;
+    }
+
+    .visit-panel h2 {
+      font-size: clamp(3rem, 4vw, 4.2rem);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .visit-panel p {
+      color: var(--muted);
+      margin-bottom: 26px;
+      max-width: 42ch;
+    }
+
+    .visit-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .visit-form label {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .visit-form input,
+    .visit-form textarea {
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(20,32,27,0.14);
+      background: rgba(255,255,255,0.7);
+      color: var(--base);
+      resize: vertical;
+      min-height: 56px;
+    }
+
+    .visit-form .button {
+      margin-top: 10px;
+      width: fit-content;
+    }
+
+    .map-panel {
+      min-height: 100%;
+    }
+
+    .map-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      border: 0;
+      filter: grayscale(1) contrast(1.2) brightness(0.82);
+    }
+
+    footer {
+      background: var(--base);
+      color: rgba(247,245,241,0.7);
+      padding: 22px 0 38px;
+      border-top: 1px solid rgba(247,245,241,0.08);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .wa-button {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      box-shadow: 0 18px 40px rgba(40, 150, 84, 0.35);
+      font-size: 1.8rem;
+      transition: transform .2s ease;
+    }
+
+    .wa-button:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 980px) {
+      .spaces-grid,
+      .coaches-grid,
+      .tier-grid,
+      .visit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .programme-item,
+      .programme-item.reverse {
+        grid-template-columns: 1fr;
+      }
+
+      .philosophy-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        gap: 12px;
+        min-height: 72px;
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        letter-spacing: 0.12em;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .hero-content {
+        padding: 80px 0 60px;
+      }
+
+      .spaces-grid,
+      .coaches-grid,
+      .tier-grid,
+      .visit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 16px;
+      }
+
+      .programme-content {
+        padding: 28px 22px;
+      }
+
+      .visit-panel {
+        padding: 24px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-<header><a class="logo" href="#">IRONHOUSE</a>
-<nav aria-label="Main"><a href="#classes">Classes</a><a href="#prices">Prices</a><a href="#join">Join</a></nav></header>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top">Ironhouse <span>Club</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#spaces">Spaces</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#coaches">Coaches</a>
+        <a href="#membership">Membership</a>
+        <a href="#visit">Request a visit</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-<div class="hero">
-<h1>Lift heavy. Leave lighter.</h1>
-<p class="lede">Twelve racks, real barbells and coaches who watch your form. No mirrors-and-smoothies theatre. Open 5 am to 10 pm, every day.</p>
-<a class="btn" href="#join">Book a free first session</a>
+  <main id="top">
+    <section class="hero" aria-label="Hero section">
+      <video class="hero-media" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80">
+        <source src="https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow" style="color: rgba(247,245,241,0.82);">Private athletic club</div>
+          <h1>Train in a place designed for depth.</h1>
+          <p>A quiet, highly considered club for strength, mobility, recovery and focused coaching — built for people who train properly.</p>
+          <div class="hero-actions">
+            <a class="button" href="#visit">Request a visit</a>
+            <a class="button secondary" href="#membership">View membership</a>
+          </div>
+          <div class="hero-meta">
+            <span>Strength</span>
+            <span>Mobility</span>
+            <span>Recovery</span>
+            <span>Private coaching</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="rig" aria-labelledby="rigt">
-<p id="rigt">Load the bar. Tap a plate to add it to both sides.</p>
-<div class="big total" aria-live="polite"><span id="kg">20</span> <small>kg on the bar</small></div>
-<svg id="bar" viewBox="0 0 800 200" role="img" aria-label="Barbell with loaded plates"></svg>
-<div class="plates" id="plates"></div>
-</div>
-</div>
+    <section class="philosophy" id="philosophy">
+      <div class="container philosophy-wrap">
+        <div>
+          <div class="eyebrow">Our philosophy</div>
+        </div>
+        <div class="philosophy-copy">
+          A club should feel calm enough to focus, beautifully considered enough to stay with you, and serious enough to demand better work from you.
+        </div>
+        <div class="philosophy-note">
+          Built for the daily ritual of training: heavier lifts, cleaner movement, proper recovery and a more measured pace.
+        </div>
+      </div>
+    </section>
 
-<section id="classes">
-<h2>Coached classes</h2>
-<div class="tabs" id="tabs" role="group" aria-label="Choose a day"></div>
-<ul class="sched" id="sched"></ul>
-</section>
+    <section id="spaces">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">The spaces</div>
+          <h2>Rooms built for the work.</h2>
+          <p>Every environment is designed to feel considered and quiet — with natural light, simple materials and the right amount of atmosphere.</p>
+        </div>
 
-<section id="prices">
-<h2>Pick your plate</h2>
-<div class="tiers">
-<div class="tier" style="--c:var(--white);border-top-color:#bbb"><h3>5 kg</h3><div class="big">600 ETB<small> / month</small></div><ul><li>Gym floor, 5 am to 4 pm</li><li>Locker access</li></ul><a class="btn" href="#join">Choose 5 kg</a></div>
-<div class="tier" style="--c:var(--green)"><h3>10 kg</h3><div class="big">900 ETB<small> / month</small></div><ul><li>Gym floor, all hours</li><li>Two coached classes a week</li></ul><a class="btn" href="#join">Choose 10 kg</a></div>
-<div class="tier" style="--c:var(--blue)"><h3>20 kg</h3><div class="big">1,400 ETB<small> / month</small></div><ul><li>Everything in 10 kg</li><li>Unlimited classes</li><li>Monthly 1-to-1 programme review</li></ul><a class="btn" href="#join">Choose 20 kg</a></div>
-</div>
-</section>
-</main>
-</div>
+        <div class="spaces-grid">
+          <article class="space-card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Strength floor with racks and barbells">
+            <div class="details">
+              <h3>Training floor</h3>
+              <p>Open space, long bars and a disciplined rhythm for serious lifts.</p>
+            </div>
+          </article>
 
-<section class="join" id="join"><div class="wrap">
-<h2>Book your free session</h2>
-<p style="margin-bottom:20px;max-width:46ch">Leave your phone number or email. We'll confirm a time within one day.</p>
-<form id="f"><label for="c" class="sr" style="position:absolute;left:-9999px">Phone or email</label>
-<input id="c" required placeholder="Phone or email" autocomplete="email"><button class="btn" type="submit">Request session</button></form>
-<p id="msg" role="status"></p>
-</div></section>
+          <article class="space-card">
+            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=900&q=80" alt="Mobility studio and small group session">
+            <div class="details">
+              <h3>Mobility studio</h3>
+              <p>Low-light, focused movement and guided work that sharpens the body.</p>
+            </div>
+          </article>
 
-<div class="wrap"><footer>© 2026 Ironhouse Gym. Open daily, 5 am to 10 pm.</footer></div>
+          <article class="space-card">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Recovery lounge with wellness details">
+            <div class="details">
+              <h3>Recovery</h3>
+              <p>Stretching, breath work and reset rituals between hard sessions.</p>
+            </div>
+          </article>
 
-<script>
-// Barbell loader
-const PL=[{kg:25,c:"#c8312b",h:150},{kg:20,c:"#1d4e89",h:140},{kg:15,c:"#f2b705",h:120,dk:1},{kg:10,c:"#2f7d4f",h:100},{kg:5,c:"#f7f7f5",h:80,dk:1}];
-let load=[];
-const kg=document.getElementById("kg"),bar=document.getElementById("bar"),box=document.getElementById("plates");
-function draw(){
-  let s='<rect x="40" y="96" width="720" height="8" fill="#8a8d92"/><rect x="330" y="88" width="140" height="24" fill="#6d7075"/>';
-  [1,-1].forEach(side=>{
-    let x=side>0?470:330;
-    load.forEach(p=>{const w=22;const px=side>0?x+4:x-4-w;
-      s+=`<rect x="${px}" y="${100-p.h/2}" width="${w}" height="${p.h}" rx="4" fill="${p.c}" stroke="#0004" stroke-width="2"/>`;
-      x+=side*(w+4);});
-  });
-  bar.innerHTML=s;
-  kg.textContent=20+2*load.reduce((a,p)=>a+p.kg,0);
-}
-PL.forEach(p=>{const b=document.createElement("button");b.textContent=p.kg;b.style.background=p.c;if(p.dk)b.style.color="#1c2026";
-  b.setAttribute("aria-label","Add "+p.kg+" kg plate to each side");
-  b.onclick=()=>{if(load.length<6){load.push(p);load.sort((a,b)=>b.kg-a.kg);draw();}};box.append(b);});
-const r=document.createElement("button");r.className="ghost";r.textContent="Clear bar";r.onclick=()=>{load=[];draw()};box.append(r);
-draw();
+          <article class="space-card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Spa and wellness space">
+            <div class="details">
+              <h3>Spa lounge</h3>
+              <p>Quiet comfort for recovery without the excess of a typical gym.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-// Schedule
-const D={Mon:[["06:00","Barbell Basics","Beginner"],["12:30","Lunch Lift","All levels"],["18:00","Squat Club","Intermediate"]],
-Tue:[["06:00","Conditioning","All levels"],["17:30","Kettlebell Strength","Beginner"],["19:00","Mobility Reset","All levels"]],
-Wed:[["06:00","Deadlift Day","Intermediate"],["12:30","Lunch Lift","All levels"],["18:00","Olympic Lifting","Advanced"]],
-Thu:[["06:00","Barbell Basics","Beginner"],["17:30","Conditioning","All levels"],["19:00","Press and Pull","Intermediate"]],
-Fri:[["06:00","Squat Club","Intermediate"],["12:30","Lunch Lift","All levels"],["18:00","Friday Mixed Session","All levels"]],
-Sat:[["08:00","Team Strength","All levels"],["09:30","Barbell Basics","Beginner"],["11:00","Mobility Reset","All levels"]],
-Sun:[["09:00","Open Floor Coaching","All levels"],["10:30","Kettlebell Strength","Beginner"]]};
-const LC={"Beginner":"#2f7d4f","All levels":"#1d4e89","Intermediate":"#9a6a00","Advanced":"#c8312b"};
-const tabs=document.getElementById("tabs"),list=document.getElementById("sched");
-function show(d){
-  [...tabs.children].forEach(b=>b.setAttribute("aria-pressed",b.textContent===d));
-  list.innerHTML=D[d].map(([t,n,l])=>`<li><b>${t}</b><span>${n}</span><span class="lvl" style="background:${LC[l]}">${l}</span></li>`).join("");
-}
-Object.keys(D).forEach(d=>{const b=document.createElement("button");b.textContent=d;b.onclick=()=>show(d);tabs.append(b);});
-const idx=(new Date().getDay()+6)%7;show(Object.keys(D)[idx]);
+    <section class="programmes" id="programmes">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Programmes</div>
+          <h2>Strong foundations, considered progression.</h2>
+          <p>Each program is designed to improve performance without noise — structured, direct and tailored to how you actually train.</p>
+        </div>
 
-// Join form (demo only: no backend)
-document.getElementById("f").onsubmit=e=>{e.preventDefault();
-  document.getElementById("msg").textContent="Thanks. We'll contact "+document.getElementById("c").value+" within one day.";e.target.reset();};
-</script>
+        <div class="programme-list">
+          <article class="programme-item">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" alt="Barbell strength training">
+            <div class="programme-content">
+              <div class="eyebrow">Strength</div>
+              <h3>Structured lifts. Better output.</h3>
+              <p>Progressive barbell work focused on technical precision, reliable recovery and real strength gains over time.</p>
+              <ul class="feature-list">
+                <li>Barbell fundamentals</li>
+                <li>Strength blocks and progress tracking</li>
+                <li>Coach-led technique refinement</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="programme-item reverse">
+            <div class="programme-content">
+              <div class="eyebrow">Mobility</div>
+              <h3>Movement that lasts.</h3>
+              <p>Mobility and stability work to improve range, reduce tension and keep you training well, not just hard.</p>
+              <ul class="feature-list">
+                <li>Joint and tendon health work</li>
+                <li>Recovery sessions and breathing drills</li>
+                <li>Movement assessments and guided progress</li>
+              </ul>
+            </div>
+            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=80" alt="Mobility and stretching session in a calm studio">
+          </article>
+
+          <article class="programme-item">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Boxing and athletic conditioning">
+            <div class="programme-content">
+              <div class="eyebrow">Conditioning</div>
+              <h3>Explosive work with control.</h3>
+              <p>Boxing and conditioning sessions that sharpen power, stamina and resilience without chaos or excess.</p>
+              <ul class="feature-list">
+                <li>Interval and punch-focused conditioning</li>
+                <li>Cardio with intention</li>
+                <li>High-level coaching and feedback</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="coaches" id="coaches">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Coaches</div>
+          <h2>Experienced specialists, not noise.</h2>
+          <p>Every coach brings technical precision, a clear eye for movement and a quiet standard of excellence.</p>
+        </div>
+
+        <div class="coaches-grid">
+          <article class="coach-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Coach portrait">
+            <div class="coach-content">
+              <h3>Daniel</h3>
+              <p>Strength coach</p>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Coach portrait">
+            <div class="coach-content">
+              <h3>Leah</h3>
+              <p>Mobility specialist</p>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80" alt="Coach portrait">
+            <div class="coach-content">
+              <h3>Marcus</h3>
+              <p>Boxing & conditioning</p>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Coach portrait">
+            <div class="coach-content">
+              <h3>Amara</h3>
+              <p>Private coaching</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership" id="membership">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color: rgba(247,245,241,0.86);">Membership</div>
+          <h2>Three ways to begin.</h2>
+          <p>Membership is simple, discreet and built around access, coaching and time in the room.</p>
+        </div>
+
+        <div class="tier-grid">
+          <article class="membership-card">
+            <span class="tag">Foundation</span>
+            <h3>Essential</h3>
+            <div class="price">From 600 <small>ETB / month</small></div>
+            <p>For members who want a focused training rhythm and access to the club floor.</p>
+            <ul>
+              <li>Gym floor access</li>
+              <li>Locker access</li>
+              <li>Standard hours</li>
+            </ul>
+            <a class="button secondary" href="#visit">Request a visit</a>
+          </article>
+
+          <article class="membership-card featured">
+            <span class="tag">Most popular</span>
+            <h3>Club</h3>
+            <div class="price">From 1,200 <small>ETB / month</small></div>
+            <p>Access across the club with coaching support and an extended training schedule.</p>
+            <ul>
+              <li>Unlimited floor access</li>
+              <li>2 coaching sessions / week</li>
+              <li>Mobility and recovery access</li>
+            </ul>
+            <a class="button" href="#visit">Request a visit</a>
+          </article>
+
+          <article class="membership-card">
+            <span class="tag">Private</span>
+            <h3>Signature</h3>
+            <div class="price">By application</div>
+            <p>For athletes and professionals seeking a more tailored, high-touch approach.</p>
+            <ul>
+              <li>Private coaching</li>
+              <li>Custom programming</li>
+              <li>Priority scheduling</li>
+            </ul>
+            <a class="button secondary" href="#visit">Request a visit</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-panel">
+          <div class="eyebrow">Request a visit</div>
+          <h2>Book a quiet introduction.</h2>
+          <p>Tell us a little about your goals and we will arrange a private tour and a conversation about the right membership for you.</p>
+
+          <form class="visit-form" action="#" method="post">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com">
+            </div>
+            <div>
+              <label for="goal">Your goal</label>
+              <textarea id="goal" name="goal" rows="4" placeholder="Strength, mobility, boxing, recovery, or private coaching"></textarea>
+            </div>
+            <button class="button" type="submit">Request a visit</button>
+          </form>
+        </div>
+
+        <div class="map-panel" aria-label="Club location map">
+          <iframe title="Ironhouse location" src="https://www.google.com/maps?q=Addis%20Ababa%20Ethiopia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Ironhouse Athletic Club.</div>
+      <div class="footer-links">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#membership">Membership</a>
+        <a href="#visit">Visit</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-button" href="https://wa.me/251911111111" aria-label="Chat on WhatsApp" target="_blank" rel="noreferrer">💬</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.querySelector('.visit-form');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!name || !email) {
+        alert('Please add your name and email before submitting.');
+        return;
+      }
+      alert('Your request has been received. We will contact you shortly.');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
+
