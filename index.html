@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironhouse Gym – Strength, simply</title>
+<meta name="description" content="Ironhouse Gym: barbells, racks, coached classes and honest monthly prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Big+Shoulders+Display:wght@800;900&display=swap" rel="stylesheet">
+<style>
+:root{--floor:#d8d6d0;--ink:#1c2026;--paper:#efeee9;--red:#c8312b;--blue:#1d4e89;--yellow:#f2b705;--green:#2f7d4f;--white:#f7f7f5}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 17px/1.55 Archivo,system-ui,sans-serif;background:var(--floor);color:var(--ink)}
+h1,h2,h3,.big{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;line-height:.92;letter-spacing:.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:900 28px "Big Shoulders Display",Impact,sans-serif;text-decoration:none}
+nav a{margin-left:22px;text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+.hero{padding:30px 0 70px}
+h1{font-size:clamp(56px,11vw,128px);max-width:9ch}
+.lede{max-width:46ch;margin:22px 0 30px;font-size:19px}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 26px;border:0;font:600 16px Archivo,sans-serif;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--red)}
+.rig{background:var(--paper);padding:22px;margin-top:40px}
+.rig p{font-weight:600}
+.total{font-size:clamp(48px,9vw,88px)}
+.total small{font:600 18px Archivo,sans-serif}
+svg{width:100%;height:auto;display:block;margin:8px 0 14px}
+.plates{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.plates button{width:64px;height:64px;border-radius:50%;border:6px solid rgba(0,0,0,.25);font:700 16px Archivo,sans-serif;cursor:pointer;color:#fff}
+.plates .ghost{width:auto;height:auto;border-radius:0;border:2px solid var(--ink);background:none;color:var(--ink);padding:10px 16px}
+section{padding:70px 0}
+h2{font-size:clamp(40px,6vw,72px);margin-bottom:26px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tabs button{padding:9px 16px;border:2px solid var(--ink);background:none;font:600 15px Archivo,sans-serif;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.sched{list-style:none;padding:0;background:var(--paper)}
+.sched li{display:grid;grid-template-columns:90px 1fr auto;gap:12px;padding:16px 20px;border-bottom:2px solid var(--floor);align-items:center}
+.sched b{font:800 26px "Big Shoulders Display",sans-serif}
+.lvl{font-size:14px;padding:3px 10px;color:#fff}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.tier{background:var(--paper);padding:26px;border-top:14px solid var(--c)}
+.tier h3{font-size:44px}
+.tier .big{font-size:52px;margin:10px 0}
+.tier ul{padding-left:18px;margin:12px 0 22px}
+.join{background:var(--ink);color:var(--paper)}
+.join form{display:flex;flex-wrap:wrap;gap:10px;max-width:560px}
+.join input{flex:1 1 240px;padding:14px;font:17px Archivo,sans-serif;border:0}
+.join .btn{background:var(--yellow);color:var(--ink)}
+#msg{margin-top:14px;min-height:1.5em}
+footer{padding:30px 0;font-size:15px}
+@media(max-width:560px){.sched li{grid-template-columns:70px 1fr}.lvl{grid-column:2;justify-self:start}nav a{margin-left:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">IRONHOUSE</a>
+<nav aria-label="Main"><a href="#classes">Classes</a><a href="#prices">Prices</a><a href="#join">Join</a></nav></header>
+
+<main>
+<div class="hero">
+<h1>Lift heavy. Leave lighter.</h1>
+<p class="lede">Twelve racks, real barbells and coaches who watch your form. No mirrors-and-smoothies theatre. Open 5 am to 10 pm, every day.</p>
+<a class="btn" href="#join">Book a free first session</a>
+
+<div class="rig" aria-labelledby="rigt">
+<p id="rigt">Load the bar. Tap a plate to add it to both sides.</p>
+<div class="big total" aria-live="polite"><span id="kg">20</span> <small>kg on the bar</small></div>
+<svg id="bar" viewBox="0 0 800 200" role="img" aria-label="Barbell with loaded plates"></svg>
+<div class="plates" id="plates"></div>
+</div>
+</div>
+
+<section id="classes">
+<h2>Coached classes</h2>
+<div class="tabs" id="tabs" role="group" aria-label="Choose a day"></div>
+<ul class="sched" id="sched"></ul>
+</section>
+
+<section id="prices">
+<h2>Pick your plate</h2>
+<div class="tiers">
+<div class="tier" style="--c:var(--white);border-top-color:#bbb"><h3>5 kg</h3><div class="big">600 ETB<small> / month</small></div><ul><li>Gym floor, 5 am to 4 pm</li><li>Locker access</li></ul><a class="btn" href="#join">Choose 5 kg</a></div>
+<div class="tier" style="--c:var(--green)"><h3>10 kg</h3><div class="big">900 ETB<small> / month</small></div><ul><li>Gym floor, all hours</li><li>Two coached classes a week</li></ul><a class="btn" href="#join">Choose 10 kg</a></div>
+<div class="tier" style="--c:var(--blue)"><h3>20 kg</h3><div class="big">1,400 ETB<small> / month</small></div><ul><li>Everything in 10 kg</li><li>Unlimited classes</li><li>Monthly 1-to-1 programme review</li></ul><a class="btn" href="#join">Choose 20 kg</a></div>
+</div>
+</section>
+</main>
+</div>
+
+<section class="join" id="join"><div class="wrap">
+<h2>Book your free session</h2>
+<p style="margin-bottom:20px;max-width:46ch">Leave your phone number or email. We'll confirm a time within one day.</p>
+<form id="f"><label for="c" class="sr" style="position:absolute;left:-9999px">Phone or email</label>
+<input id="c" required placeholder="Phone or email" autocomplete="email"><button class="btn" type="submit">Request session</button></form>
+<p id="msg" role="status"></p>
+</div></section>
+
+<div class="wrap"><footer>© 2026 Ironhouse Gym. Open daily, 5 am to 10 pm.</footer></div>
+
+<script>
+// Barbell loader
+const PL=[{kg:25,c:"#c8312b",h:150},{kg:20,c:"#1d4e89",h:140},{kg:15,c:"#f2b705",h:120,dk:1},{kg:10,c:"#2f7d4f",h:100},{kg:5,c:"#f7f7f5",h:80,dk:1}];
+let load=[];
+const kg=document.getElementById("kg"),bar=document.getElementById("bar"),box=document.getElementById("plates");
+function draw(){
+  let s='<rect x="40" y="96" width="720" height="8" fill="#8a8d92"/><rect x="330" y="88" width="140" height="24" fill="#6d7075"/>';
+  [1,-1].forEach(side=>{
+    let x=side>0?470:330;
+    load.forEach(p=>{const w=22;const px=side>0?x+4:x-4-w;
+      s+=`<rect x="${px}" y="${100-p.h/2}" width="${w}" height="${p.h}" rx="4" fill="${p.c}" stroke="#0004" stroke-width="2"/>`;
+      x+=side*(w+4);});
+  });
+  bar.innerHTML=s;
+  kg.textContent=20+2*load.reduce((a,p)=>a+p.kg,0);
+}
+PL.forEach(p=>{const b=document.createElement("button");b.textContent=p.kg;b.style.background=p.c;if(p.dk)b.style.color="#1c2026";
+  b.setAttribute("aria-label","Add "+p.kg+" kg plate to each side");
+  b.onclick=()=>{if(load.length<6){load.push(p);load.sort((a,b)=>b.kg-a.kg);draw();}};box.append(b);});
+const r=document.createElement("button");r.className="ghost";r.textContent="Clear bar";r.onclick=()=>{load=[];draw()};box.append(r);
+draw();
+
+// Schedule
+const D={Mon:[["06:00","Barbell Basics","Beginner"],["12:30","Lunch Lift","All levels"],["18:00","Squat Club","Intermediate"]],
+Tue:[["06:00","Conditioning","All levels"],["17:30","Kettlebell Strength","Beginner"],["19:00","Mobility Reset","All levels"]],
+Wed:[["06:00","Deadlift Day","Intermediate"],["12:30","Lunch Lift","All levels"],["18:00","Olympic Lifting","Advanced"]],
+Thu:[["06:00","Barbell Basics","Beginner"],["17:30","Conditioning","All levels"],["19:00","Press and Pull","Intermediate"]],
+Fri:[["06:00","Squat Club","Intermediate"],["12:30","Lunch Lift","All levels"],["18:00","Friday Mixed Session","All levels"]],
+Sat:[["08:00","Team Strength","All levels"],["09:30","Barbell Basics","Beginner"],["11:00","Mobility Reset","All levels"]],
+Sun:[["09:00","Open Floor Coaching","All levels"],["10:30","Kettlebell Strength","Beginner"]]};
+const LC={"Beginner":"#2f7d4f","All levels":"#1d4e89","Intermediate":"#9a6a00","Advanced":"#c8312b"};
+const tabs=document.getElementById("tabs"),list=document.getElementById("sched");
+function show(d){
+  [...tabs.children].forEach(b=>b.setAttribute("aria-pressed",b.textContent===d));
+  list.innerHTML=D[d].map(([t,n,l])=>`<li><b>${t}</b><span>${n}</span><span class="lvl" style="background:${LC[l]}">${l}</span></li>`).join("");
+}
+Object.keys(D).forEach(d=>{const b=document.createElement("button");b.textContent=d;b.onclick=()=>show(d);tabs.append(b);});
+const idx=(new Date().getDay()+6)%7;show(Object.keys(D)[idx]);
+
+// Join form (demo only: no backend)
+document.getElementById("f").onsubmit=e=>{e.preventDefault();
+  document.getElementById("msg").textContent="Thanks. We'll contact "+document.getElementById("c").value+" within one day.";e.target.reset();};
+</script>
+</body>
+</html>
